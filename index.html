@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Arushee Gift Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Password Section 1 -->
+  <div id="passwordContainer" class="login-container">
+    <div id="typewriter" class="typewriter"></div>
+    <div id="passwordSection" class="password-group hidden">
+      <div class="password-input-container">
+        <input type="password" id="password" placeholder="Enter Password" />
+        <span id="toggleEye" class="eye">👁️</span>
+      </div>
+      <button class="enter-btn" onclick="checkPassword()">Enter →</button>
+      <button onclick="showHint()">Hint 🤔?</button>
+      <p id="hintText" class="hint hidden">The name starts with 'A'</p>
+    </div>
+  </div>
+
+  <!-- Main Content (Hidden initially) -->
+  <div id="mainContent" class="main-content hidden">
+    
+    <!-- Single Continuous Container -->
+    <div class="story-container">
+      
+      <!-- First Text Section -->
+      <div id="firstText" class="typewriter-text"></div>
+
+      <!-- Video Section -->
+      <div id="videoText" class="typewriter-text hidden"></div>
+      <video id="mainVideo" muted playsinline class="story-video hidden">
+        <source src="attached_assets/new project.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Photo Section -->
+      <div id="photoText" class="typewriter-text hidden"></div>
+      <div class="photo-wrapper hidden">
+        <img src="attached_assets/WhatsApp Image 2025-05-26 at 11.01.48_7496dd74.jpg" alt="Photo" class="main-photo" />
+      </div>
+      <div id="photoDescription" class="typewriter-text hidden"></div>
+
+      <!-- Hidden Image Section (Password Protected) -->
+      <div id="hiddenPhotoSection" class="password-section hidden">
+        <div id="hiddenPhotoText" class="typewriter-text"></div>
+        <div id="secondPasswordSection" class="password-group">
+          <div class="password-input-container">
+            <input type="password" id="secondPassword" placeholder="Enter Second Password" />
+            <span id="toggleEye2" class="eye">👁️</span>
+          </div>
+          <button class="enter-btn" onclick="checkSecondPassword()">Enter →</button>
+          <button onclick="showSecondHint()">Hint 🤔?</button>
+          <p id="secondHintText" class="hint hidden">Think about someone special...</p>
+        </div>
+      </div>
+
+      <!-- Journey Feeling Question -->
+      <div id="journeyFeelingSection" class="hidden">
+        <div id="journeyFeelingText" class="typewriter-text emotional-text"></div>
+      </div>
+
+      <!-- Liking Progress Section -->
+      <div id="likingProgressSection" class="hidden">
+        <div id="likingProgressText" class="typewriter-text smooth-text"></div>
+
+      </div>
+
+      <!-- Hidden Photo Revealed -->
+      <div id="hiddenPhotoRevealed" class="hidden">
+        <img src="attached_assets/i.png" alt="Solo Photo" class="main-photo" />
+        <div id="hiddenPhotoRevealText" class="typewriter-text playful-text"></div>
+      </div>
+
+      <!-- Second Hidden Photo Section -->
+      <div id="secondHiddenPhotoSection" class="password-section hidden">
+        <div id="secondHiddenPhotoText" class="typewriter-text"></div>
+        <div id="thirdPasswordSection" class="password-group">
+          <div class="password-input-container">
+            <input type="password" id="thirdPassword" placeholder="Enter Third Password" />
+            <span id="toggleEye3" class="eye">👁️</span>
+          </div>
+          <button class="enter-btn" onclick="checkThirdPassword()">Enter →</button>
+          <button onclick="showThirdHint()">Hint 🤔?</button>
+          <p id="thirdHintText" class="hint hidden">Think about our special connection...</p>
+        </div>
+      </div>
+
+      <!-- Second Hidden Photo Revealed -->
+      <div id="secondHiddenPhotoRevealed" class="hidden">
+        <img src="attached_assets/second photo.jpg" alt="Second Solo Photo" class="main-photo" />
+        <div id="secondHiddenPhotoRevealText" class="typewriter-text quote-text"></div>
+      </div>
+
+      <!-- Continued Story Section -->
+      <div id="continuedStory" class="hidden">
+        <div id="continuedStoryText" class="typewriter-text"></div>
+        <video id="compilationVideo" muted playsinline class="story-video">
+          <source src="attached_assets/new project.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Final Section - Hope Message -->
+      <div id="finalSection1" class="hidden">
+        <div id="finalText1" class="typewriter-text"></div>
+      </div>
+
+      <!-- Screen Recording Video -->
+      <div id="screenRecordingSection" class="hidden">
+        <div id="screenRecordingText" class="typewriter-text"></div>
+        <video id="screenRecordingVideo" muted playsinline class="story-video">
+          <source src="attached_assets/new project.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Dekha Section -->
+      <div id="dekhaSection" class="hidden">
+        <div id="dekhaText" class="typewriter-text"></div>
+      </div>
+
+      <!-- Wait Section -->
+      <div id="waitSection" class="hidden">
+        <div id="waitText" class="typewriter-text"></div>
+        <video id="surpriseVideo" muted playsinline class="story-video hidden">
+          <source src="attached_assets/new project.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Final Conclusion -->
+      <div id="conclusionSection" class="hidden">
+        <div id="conclusionText" class="typewriter-text"></div>
+      </div>
+
+
+
+    </div>
+    
+    <!-- Scattered Doodles - Reduced and Well-Placed -->
+    <div class="scattered-doodles">
+      <img src="attached_assets/6a0ad666371dc6f5de11f502195307aa.jpg" alt="Pikachu" class="floating-doodle doodle-1" />
+      <img src="attached_assets/WhatsApp Image 2025-05-26 at 17.24.14_35d5cbb5.jpg" alt="Happy Face" class="floating-doodle doodle-2" />
+      <img src="attached_assets/WhatsApp Image 2025-05-26 at 17.24.43_de22c458.jpg" alt="Spider-man" class="floating-doodle doodle-3" />
+      <img src="attached_assets/Master oogway 😇.png" alt="QR Code" class="floating-doodle doodle-4" />
+      <img src="attached_assets/6a0ad666371dc6f5de11f502195307aa.jpg" alt="Pikachu 2" class="floating-doodle doodle-5" />
+      <img src="attached_assets/WhatsApp Image 2025-05-26 at 17.24.14_35d5cbb5.jpg" alt="Happy Face 2" class="floating-doodle doodle-6" />
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
