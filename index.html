@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Arushee Gift Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Password Section 1 -->
+  <div id="passwordContainer" class="login-container">
+    <div id="typewriter" class="typewriter"></div>
+    <div id="passwordSection" class="password-group hidden">
+      <div class="password-input-container">
+        <input type="password" id="password" placeholder="Enter Password" />
+        <span id="toggleEye" class="eye">👁️</span>
+      </div>
+      <button class="enter-btn" onclick="checkPassword()">Enter →</button>
+      <button onclick="showHint()">Hint 🤔?</button>
+      <p id="hintText" class="hint hidden">hmm, there's a line in a letter in brackets. Hope tu find kr le isly complicated nhi kra, if smjh nhi aaya just text me😉</p>
+    </div>
+  </div>
+
+  <!-- Main Content (Hidden initially) -->
+  <div id="mainContent" class="main-content hidden">
+
+    <!-- Single Continuous Container -->
+    <div class="story-container">
+
+      <!-- First Text Section -->
+      <div id="firstText" class="typewriter-text"></div>
+      
+      <!-- Video Section -->
+      <div id="videoText" class="typewriter-text hidden"></div>
+      <video id="mainVideo" playsinline class="story-video hidden" preload="metadata">
+        <source src="attached_assets/new project.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Photo Section -->
+      <div id="photoText" class="typewriter-text hidden"></div>
+      <div class="photo-wrapper hidden">
+        <img src="attached_assets/First photo.png" alt="Photo" class="main-photo" />
+      </div>
+      <div id="photoDescription" class="typewriter-text hidden"></div>
+
+      <!-- Hidden Image Section (Password Protected) -->
+      <div id="hiddenPhotoSection" class="password-section hidden">
+        <div id="hiddenPhotoText" class="typewriter-text"></div>
+        <div id="secondPasswordSection" class="password-group">
+          <div class="password-input-container">
+            <input type="password" id="secondPassword" placeholder="Enter Second Password" />
+            <span id="toggleEye2" class="eye">👁️</span>
+          </div>
+          <button class="enter-btn" onclick="checkSecondPassword()">Enter →</button>
+          <button onclick="showSecondHint()">Hint 🤔?</button>
+          <p id="secondHintText" class="hint hidden">Are nhi smjhi kaamal hai kya kr rhi hai arushee..... chl uska main theme ye hai🏐 ...</p>
+        </div>
+      </div>
+
+      <!-- Journey Feeling Question -->
+      <div id="journeyFeelingSection" class="hidden">
+        <div id="journeyFeelingText" class="typewriter-text emotional-text"></div>
+      </div>
+
+      <!-- Liking Progress Section -->
+      <div id="likingProgressSection" class="hidden">
+        <div id="likingProgressText" class="typewriter-text smooth-text"></div>
+
+      </div>
+
+      <!-- Hidden Photo Revealed -->
+      <div id="hiddenPhotoRevealed" class="hidden">
+        <img src="attached_assets/weirdphoto.png" alt="Interesting photo" class="main-photo" />
+        <div id="hiddenPhotoRevealText" class="typewriter-text playful-text"></div>
+      </div>
+
+      <!-- Second Hidden Photo Section -->
+      <div id="secondHiddenPhotoSection" class="password-section hidden">
+        <div id="secondHiddenPhotoText" class="typewriter-text"></div>
+        <div id="thirdPasswordSection" class="password-group">
+          <div class="password-input-container">
+            <input type="password" id="thirdPassword" placeholder="password" />
+            <span id="toggleEye3" class="eye">👁️</span>
+          </div>
+          <button class="enter-btn" onclick="checkThirdPassword()">Enter →</button>
+          <button onclick="showThirdHint()">Hint 🤔?</button>
+          <p id="thirdHintText" class="hint hidden">Aree box me and question me likha hai type the "password" 🙂‍↕
+          </p>
+        </div>
+      </div>
+
+      <!-- Second Hidden Photo Revealed -->
+      <div id="secondHiddenPhotoRevealed" class="hidden">
+        <img src="attached_assets/Solo.png" alt="Solo" class="main-photo" />
+        <div id="secondHiddenPhotoRevealText" class="typewriter-text quote-text"></div>
+      </div>
+
+      <!-- Continued Story Section -->
+      <div id="continuedStory" class="hidden">
+        <div id="continuedStoryText" class="typewriter-text"></div>
+        <video id="compilationVideo" playsinline class="story-video" preload="metadata">
+          <source src="attached_assets/Compilation.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Final Section - Hope Message -->
+      <div id="finalSection1" class="hidden">
+        <div id="finalText1" class="typewriter-text"></div>
+      </div>
+
+      <!-- Screen Recording Video -->
+      <div id="screenRecordingSection" class="hidden">
+        <div id="screenRecordingText" class="typewriter-text"></div>
+        <video id="screenRecordingVideo" playsinline class="story-video" preload="metadata">
+          <source src="attached_assets/Jatin Video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Dekha Section -->
+      <div id="dekhaSection" class="hidden">
+        <div id="dekhaText" class="typewriter-text"></div>
+      </div>
+      
+      <!-- Wait Section -->
+      <div id="waitSection" class="hidden">
+        <div id="waitText" class="typewriter-text"></div>
+        <video id="surpriseVideo" playsinline class="story-video hidden" preload="metadata">
+          <source src="attached_assets/hidden gift.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Final Conclusion -->
+      <div id="conclusionSection" class="hidden">
+        <div id="conclusionText" class="typewriter-text"></div>
+      </div>
+
+
+
+    </div>
+   
+    <!-- Scattered Doodles - Reduced and Well-Placed -->
+    <div class="scattered-doodles">
+      <img src="attached_assets/Flower girleee.jpg" alt="Flower girlee"
+        class="floating-doodle doodle-1" />
+      <img src="attached_assets/smile.jpg" alt="Do some smile"
+        class="floating-doodle doodle-2" />
+      <img src="attached_assets/here some flower.jpg" alt="Here some flower for you"
+        class="floating-doodle doodle-3" />
+      <img src="attached_assets/yanwing.jpg" alt="yawning" class="floating-doodle doodle-4" />
+      <img src="attached_assets/boss.jpg" alt="boss"
+        class="floating-doodle doodle-5" />
+      <img src="attached_assets/Cat.jpg" alt="Cat girl"
+        class="floating-doodle doodle-6" />
+    </div>
+
+  </div>
+
+  <!-- Background Music Player -->
+  <div id="musicPlayer" class="music-control">
+    <button id="musicToggle" class="music-toggle-btn">🎵</button>
+  </div>
+
+  <!-- Hidden YouTube Player for Background Music -->
+  <div id="hiddenMusicPlayer"
+    style="position: absolute; top: -9999px; left: -9999px; width: 1px; height: 1px; opacity: 0;"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
