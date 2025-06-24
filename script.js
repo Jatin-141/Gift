@@ -516,7 +516,7 @@ function showFinalSection1() {
   document.getElementById("finalSection1").classList.remove("hidden");
   autoScrollToNext(500);
 
-  const finalText1 = "Achi lgi hn? Hn kya keh rhi hai? Achha lga, Phew... 😮‍💨🤧 💕\n kash apn dono ki bhi photos hoti jese kirti and krishna ke pass hai😔🥹\n\n Ye sbh likhte waqt and krte waqt kaafi time mujhe apni chats ko scroll Krna pda\n shit yr kitna roya hu me tere saamne 🫩 \n Pr koi gul nhi ji achi baat hai tujhe hi toh btaya hai koi toh mila cllg me jisko bta ska💖\n Pr me hi emotional ho gya tha ki kitni baat kri humne🥹\n\n";
+  const finalText1 = "Achi lgi hn? Hn kya keh rhi hai? Achha lga, Phew... 😮‍💨🤧 💕\n kash apn dono ki bhi photos hoti jese kirti and krishna ke pass hai😔🥹\n\n Ye sbh likhte waqt and krte waqt kaafi time mujhe apni chats ko scroll Krna pda\n shit yr kitna roya hu me tere saamne 😟 \n Pr koi gul nhi ji achi baat hai tujhe hi toh btaya hai koi toh mila cllg me jisko bta ska💖\n Pr me hi emotional ho gya tha ki kitni baat kri humne🥹\n\n";
   const finalText1El = document.getElementById("finalText1");
 
   typewriterEffect(finalText1El, finalText1, () => {
@@ -643,7 +643,6 @@ let backgroundMusic = {
     'Ip6cw8gfHHI',
     'nyuo9-OjNNg',
     'MgNItWdfEIU',
-    'n89SKAymNfA',
     'QQQ_eSi8kAo'
   ],
   player: null,
