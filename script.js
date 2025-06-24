@@ -3,8 +3,6 @@ const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const isLowEndDevice = navigator.hardwareConcurrency <= 4 || navigator.deviceMemory <= 4;
 
-const devMode = true; // 👈 Set this to false when finalizing
-
 // Global variables for typewriter effects - Slower for emotional impact
 const typewriterSpeed = isMobile ? 180 : 120; // Slower for better readability and emotion
 let currentSection = 0;
@@ -125,8 +123,7 @@ function startInitialTypewriter() {
 }
 
 // Ultra-optimized typewriter effect
-function typewriterEffect(element, text, callback = null, speed = devMode ? 15 : typewriterSpeed) {
-
+function typewriterEffect(element, text, callback = null, speed = typewriterSpeed) {
   if (isTyping) return;
 
   isTyping = true;
@@ -642,9 +639,11 @@ let backgroundMusic = {
   isPlaying: false,
   volume: 30,
   tracks: [
-    '6WNHEo7idB8',
-    'ZY1f7E_2iFA',
-    'RBtlPT23PTM',
+    'IpFX2vq8HKw',
+    'Ip6cw8gfHHI',
+    'nyuo9-OjNNg',
+    'MgNItWdfEIU',
+    'n89SKAymNfA',
     'QQQ_eSi8kAo'
   ],
   player: null,
@@ -835,19 +834,6 @@ if (isMobile) {
 } else {
   // Setup video controls for desktop
   document.addEventListener('DOMContentLoaded', setupVideoControls);
-}
-
-// Dev mode shortcut testing
-if (devMode) {
-  window.addEventListener("keydown", function (e) {
-    if (e.key === "1") showVideoSection();
-    if (e.key === "2") showPhotoSection();
-    if (e.key === "3") showHiddenPhotoSection();
-    if (e.key === "4") showSecondHiddenPhotoSection();
-    if (e.key === "5") showScreenRecording();
-    if (e.key === "6") showWaitSection();
-    if (e.key === "7") revealSurpriseVideo();
-  });
 }
 
 // Throttled scroll for performance
